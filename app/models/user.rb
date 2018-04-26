@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :rides
-  
-  
+  has_many :items
+  has_many :images
+  has_many :microposts
 end

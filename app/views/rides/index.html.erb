@@ -2,7 +2,10 @@
 
 <h1>Rides</h1>
 
-<table>
+<br>
+
+
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Pickup</th>
@@ -11,13 +14,12 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @rides.each do |ride| %>
       <tr>
         <td><%= ride.pickup %></td>
         <td><%= ride.drop %></td>
-        <td><%= ride.user %></td>
+        <td><%= ride.user.id %></td>
         <td><%= link_to 'Show', ride %></td>
         <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
         <td><%= link_to 'Destroy', ride, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,6 +28,5 @@
   </tbody>
 </table>
 
-<br>
 
 <%= link_to 'New Ride', new_ride_path %>
