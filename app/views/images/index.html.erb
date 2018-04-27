@@ -1,18 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Images</h1>
-
-<br>
-
-
-<table class="table table-hover">
+<%- model_class = Image -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Image Path</th>
-      <th>User Id</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:picture) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -22,7 +20,7 @@
         <td><%= image.name %></td>
         <td><%= image.picture %></td>
         <td><%= image.user_id %></td>
-        
+        <td><%=l image.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       image_path(image), :class => 'btn btn-default btn-xs' %>

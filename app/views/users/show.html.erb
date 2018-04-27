@@ -1,4 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Email <%= @hello.email %> </h1>
-<h4>Email <%= @hello.id %> </h4>
+
+
+
+<style>
+  .container{
+    display:grid;
+    grid-template-columns: 2fr, 1fr; 
+  }
+</style>
+
+<div>
+  <h1>Email <%= @user.email %> </h1> <br>
+  <h4>User.id <%= @user.id %> </h4>
+</div>
+
+  <div>
+    <% if @user.reviews.any? %>
+      <h3>Number of Review (<%= @user.reviews.count %>)</h3> <br>
+        <% @user.reviews.each do |review| %> 
+          <h4>Rating: <%= review.rating %> </h4>
+          <h4>Rating: <%= review.comment %> </h4>
+        <% end %>
+      <% end %>  
+  </div>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores delectus nesciunt illum fuga eum repellat, vel dolorem neque 
+    beatae deserunt numquam perferendis hic saepe sit optio eos error quisquam architecto!
+  </div>
+

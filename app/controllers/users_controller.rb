@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
+    
     def index
         @user = User.all
     end
     
     def show
-        @hello = User.first
+        @user = User.find(params[:id])
+        @review = @user.reviews
     end
-    
 end
 

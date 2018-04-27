@@ -8,11 +8,13 @@ gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 
 gem 'devise'
-gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 
+gem 'bootstrap', '~> 4.0.0.alpha3' 
 
+
+gem 'twitter-bootstrap-rails'
 
 #gem for image upload
 gem 'carrierwave'
