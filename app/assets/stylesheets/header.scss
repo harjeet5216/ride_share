@@ -1,0 +1,68 @@
+header {
+	background-color: #f3f3f3;
+	width: 100%; 
+	height: 100px;
+}
+
+header .nav-bar-logo {
+    font-family: optima;
+    font-size: 24px;
+    font-weight: 900;
+    color: #111;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+header nav ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 0 15px;
+    
+}
+
+header nav ul li a {
+    font-family: optima;
+    font-size: 24px;
+    color: #111;
+}
+
+header .user-information {
+    display: none;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    
+    header .nav-bar-logo {
+        display: block;
+        margin: 31px 0;
+        text-align: left;
+        line-height: 38px;
+        padding: 0px 20px 0px 40px;
+        border-right: 3px solid #111;
+        float: left;
+    }
+
+    header nav ul {
+        margin: 20px 0px 0px 20px;
+        float: left;
+    }
+    
+    header nav ul li a {
+        line-height: 60px;
+    }
+
+    header .user-information {
+        display: block;
+        float: right;
+    }    
+}

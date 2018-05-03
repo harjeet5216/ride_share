@@ -1,3 +1,53 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.welcome-index-links div {
+    margin: 16px 16px 0;
+    width: calc(100% - 32px);
+    height: 100px;
+    background-color: #f2f2f2;
+}
+
+.welcome-index-links div h3 {
+    line-height: 100px;
+    font-size: 28px;
+    font-family: optima;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    
+    .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }  
+    .welcome-index-links div {
+        margin: 20px 10px 0;
+        width: calc(100% - 32px);
+        height: 230px;
+        background-color: #f2f2f2;
+        float: left;
+    }
+    
+    .welcome-index-links div h3 {
+        line-height: 230px;
+    }
+    
+    .welcome-page-index-square {
+        width: calc(25% - 20px) !important;
+    }
+    
+    .welcome-page-index-rectangle {
+        width: calc(50% - 20px) !important;
+    }
+    
+    .welcome-index-links {
+        padding-bottom: 20px;
+        overflow: hidden;
+    }
+}
